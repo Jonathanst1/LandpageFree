@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PatraoJamais</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    
+
+    <style>
+        .body {
+            font-family: sans-serif;
+            
+        }
+        .container {
+            background-color: #1d1b23;
+            max-width: 1410px;
+            
+        }
+        .titulo {
+            text-align: center;
+            animation: pulse 0.7s   20ms;
+            color: white;
+        }
+        .titulo h1 {
+            font-size: 25px;
+            margin: auto;
+            display: table;
+            animation-direction: alternate;
+            -webkit-animation-name: pulse;
+            animation-name: pulse ;
+            
+        }
+        @-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+    -webkit-filter: brightness(100%);
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+    -webkit-filter: brightness(200%);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    filter: brightness(100%);
+  }
+  100% {
+    transform: scale(1.1);
+    filter: brightness(200%);
+  }
+}
+        
+.logo {
+    
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-weight: bold;
+    
+    
+}
+
+
+@keyframes neon {
+    from {
+        filter: drop-shadow(0 0 var(--cor-neon));
+    }
+    to {
+        filter:drop-shadow(0 0 50px var(--cor-neon));
+    }
+}
+ 
+
+
+.desc {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom:10px;
+    align-items: center;
+    justify-content: center;   
+    
+}
+.desc p {
+    margin-top: 20px;
+}
+.desc h2 {
+    font-size: 25px;
+    border: 2px solid white;
+    border-radius: 10px;
+    width: 600px;
+    animation: neon 3s alternate infinite ease-in-out;
+    --cor-neon:red;
+    
+       
+}
+
+.video{
+    background-color:#1d1b23;
+    display:flex;
+    justify-content:center;
+    margin-top:50px;
+    
+    
+}
+
+.txtcertificado {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom:10px;
+    align-items: center;
+    justify-content: center;  
+    color: white;
+}
+.imagensCertificados {
+    display: flex;
+    flex-wrap: wrap;
+    
+   align-items: center;
+   justify-content: center;
+}
+.imagemPreco{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+.imagemPreco img {
+    width: 600px;
+    height: 600px;
+    border: 10px solid red;
+    animation: neon 3s alternate infinite ease-in-out;
+    --cor-neon:red;
+}
+.Botao-inscricao {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.garantia {
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+      
+}
+.garantia img {
+    width: 600px;
+    height: 500px;
+}
+.textoGarantia {
+    color: white;
+    font-weight: bold;
+}
+.Aprender {
+    text-align: center;
+    margin-top: 25px;
+}
+.Aprender h2 {
+    color: white;
+}
+.Aprender h3 {
+    color: red;
+    animation: neon 3s alternate infinite ease-in-out;
+    --cor-neon:red;
+}
+
+.ConteudoDasAulas {
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.ConteudoDasAulas img {
+    width: 400px;
+    border: 2px solid red;
+    transition: width 2s, height 4s;
+    animation: neon 3s alternate infinite ease-in-out;
+    --cor-neon:red;
+}
+.ConteudoDasAulas img:hover{
+
+    width: 500px;
+    height: 400px;
+}
+.tx {
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    
+}
+.tx h1 {
+    font-size: 25px;
+    
+}
+.textoUltimovideo {
+    color: white;
+    text-align: center;
+}
+.facebook-share-button{
+            display: inline-block;            
+            width: 40px;
+            height: 40px;
+            margin: 5px;
+            background-size: 100% 100%; /* ou 'contain' */
+            background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSI2MHB4IiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA2MCA2MCIgd2lkdGg9IjYwcHgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6c2tldGNoPSJodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2gvbnMiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48dGl0bGUvPjxkZXNjLz48ZGVmcy8+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBpZD0ic29pY2FsIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSI+PGcgaWQ9InNvY2lhbCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTI3My4wMDAwMDAsIC0xMzguMDAwMDAwKSI+PGcgaWQ9InNsaWNlcyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTczLjAwMDAwMCwgMTM4LjAwMDAwMCkiLz48ZyBmaWxsPSIjMzQ2REE2IiBpZD0ic3F1YXJlLWZsYXQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE3My4wMDAwMDAsIDEzOC4wMDAwMDApIj48cGF0aCBkPSJNMTAyLjk5NTkzNywwIEwxNTcuMDA0MDYzLDAgQzE1OC42NTg2NzMsMCAxNjAsMS4zMzczMDk3NCAxNjAsMi45OTU5Mzc0MyBMMTYwLDU3LjAwNDA2MjYgQzE2MCw1OC42NTg2NzMxIDE1OC42NjI2OSw2MCAxNTcuMDA0MDYzLDYwIEwxMDIuOTk1OTM3LDYwIEMxMDEuMzQxMzI3LDYwIDEwMCw1OC42NjI2OTAzIDEwMCw1Ny4wMDQwNjI2IEwxMDAsMi45OTU5Mzc0MyBDMTAwLDEuMzQxMzI2ODggMTAxLjMzNzMxLDAgMTAyLjk5NTkzNywwIFoiIGlkPSJzcXVhcmUtMiIvPjwvZz48ZyBmaWxsPSIjRkZGRkZGIiBpZD0iaWNvbiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTgyLjAwMDAwMCwgMTUwLjAwMDAwMCkiPjxwYXRoIGQ9Ik0xMTYuNDYyMjI0LDM1LjMxNDMxMyBMMTE2LjQ2MjIyNCwxNy45OTg5NjEzIEwxMTIuOTQzMjg5LDE3Ljk5ODk2MTIgTDExMi45NDMyODksMTIuMjU5MzU2MyBMMTE2LjQ2MjIyNCwxMi4yNTkzNTYzIEwxMTYuNDYyMjI0LDguNzg4Mzg2NDEgQzExNi40NjIyMjQsNC4xMDY2NDIyMiAxMTcuODYxOTk1LDAuNzMwNjE4OTg2IDEyMi45ODgxMDIsMC43MzA2MTg5ODYgTDEyOS4wODYzNiwwLjczMDYxODk4NiBMMTI5LjA4NjM2LDYuNDU4NDM5OTYgTDEyNC43OTIyNTUsNi40NTg0Mzk5NiBDMTIyLjY0MTg5NCw2LjQ1ODQzOTk2IDEyMi4xNTE4NzQsNy44ODczNzYzIDEyMi4xNTE4NzQsOS4zODM3NjA5NSBMMTIyLjE1MTg3NCwxMi4yNTkzNTUzIEwxMjguNzY5NDIzLDEyLjI1OTM1NTggTDEyNy44NjYxNzMsMTcuOTk4OTYxMyBMMTIyLjE1MTg3NCwxNy45OTg5NjEzIEwxMjIuMTUxODc0LDM1LjMxNDMxMjMgTDExNi40NjIyMjQsMzUuMzE0MzEzIFoiIGlkPSJmYWNlYm9vayIvPjwvZz48L2c+PC9nPjwvc3ZnPg=="); /*Base 64 Icon by Xinh Studio*/
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+.whatsapp-share-button{
+            display: inline-block;            
+            width: 40px;
+            height: 40px;
+            margin: 5px;
+            background-size: 100% 100%; /* ou 'contain' */
+            background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSI2MHB4IiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA2MCA2MCIgd2lkdGg9IjYwcHgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6c2tldGNoPSJodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2gvbnMiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48dGl0bGUvPjxkZXNjLz48ZGVmcy8+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBpZD0ic29pY2FsIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSI+PGcgaWQ9InNvY2lhbCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTk3My4wMDAwMDAsIC01MzguMDAwMDAwKSI+PGcgaWQ9InNsaWNlcyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTczLjAwMDAwMCwgMTM4LjAwMDAwMCkiLz48ZyBmaWxsPSIjNTdCQTYzIiBpZD0ic3F1YXJlLWZsYXQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE3My4wMDAwMDAsIDEzOC4wMDAwMDApIj48cGF0aCBkPSJNODAyLjk5NTkzNyw0MDAgTDg1Ny4wMDQwNjMsNDAwIEM4NTguNjU4NjczLDQwMCA4NjAsNDAxLjMzNzMxIDg2MCw0MDIuOTk1OTM3IEw4NjAsNDU3LjAwNDA2MyBDODYwLDQ1OC42NTg2NzMgODU4LjY2MjY5LDQ2MCA4NTcuMDA0MDYzLDQ2MCBMODAyLjk5NTkzNyw0NjAgQzgwMS4zNDEzMjcsNDYwIDgwMCw0NTguNjYyNjkgODAwLDQ1Ny4wMDQwNjMgTDgwMCw0MDIuOTk1OTM3IEM4MDAsNDAxLjM0MTMyNyA4MDEuMzM3MzEsNDAwIDgwMi45OTU5MzcsNDAwIFoiIGlkPSJzcXVhcmUtNDkiLz48L2c+PGcgZmlsbD0iI0ZGRkZGRiIgaWQ9Imljb24iIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE4Mi4wMDAwMDAsIDE1MC4wMDAwMDApIj48cGF0aCBkPSJNODIxLjA3MTI2Miw0MzQuMjIxMDQ2IEM4MTguMjEwODMxLDQzNC4yMjEwNDYgODE1LjUyMzU2OSw0MzMuNDg5OTY5IDgxMy4xODU2LDQzMi4yMDY4OTIgTDgwNC4xNTM4NDYsNDM1LjA3NjkyMyBMODA3LjA5ODA5Miw0MjYuMzkxODc3IEM4MDUuNjEzMDQ2LDQyMy45NTIzNjkgODA0Ljc1NzUzOCw0MjEuMDkxNTY5IDgwNC43NTc1MzgsNDE4LjAzMzYgQzgwNC43NTc1MzgsNDA5LjA5MzQxNSA4MTIuMDYxMjkyLDQwMS44NDYxNTQgODIxLjA3MTYzMSw0MDEuODQ2MTU0IEM4MzAuMDgwODYyLDQwMS44NDYxNTQgODM3LjM4NDYxNSw0MDkuMDkzNDE1IDgzNy4zODQ2MTUsNDE4LjAzMzYgQzgzNy4zODQ2MTUsNDI2Ljk3Mzc4NSA4MzAuMDgxMjMxLDQzNC4yMjEwNDYgODIxLjA3MTI2Miw0MzQuMjIxMDQ2IFogTTgyMS4wNzEyNjIsNDA0LjQyNDEyMyBDODEzLjUwNzkzOCw0MDQuNDI0MTIzIDgwNy4zNTU4MTUsNDEwLjUyOTM1NCA4MDcuMzU1ODE1LDQxOC4wMzM2IEM4MDcuMzU1ODE1LDQyMS4wMTE0NDYgODA4LjMyNjUyMyw0MjMuNzY5MjMxIDgwOS45NjgxMjMsNDI2LjAxMzA0NiBMODA4LjI1NDg5Miw0MzEuMDY3MDc3IEw4MTMuNTI1MjkyLDQyOS4zOTE4NzcgQzgxNS42OTEyLDQzMC44MTM3ODUgODE4LjI4NTQxNSw0MzEuNjQzMDc3IDgyMS4wNzEyNjIsNDMxLjY0MzA3NyBDODI4LjYzMzQ3Nyw0MzEuNjQzMDc3IDgzNC43ODY3MDgsNDI1LjUzODIxNSA4MzQuNzg2NzA4LDQxOC4wMzM5NjkgQzgzNC43ODY3MDgsNDEwLjUyOTcyMyA4MjguNjMzNDc3LDQwNC40MjQxMjMgODIxLjA3MTI2Miw0MDQuNDI0MTIzIEw4MjEuMDcxMjYyLDQwNC40MjQxMjMgWiBNODI5LjMwODgsNDIxLjc2MTcyMyBDODI5LjIwODM2OSw0MjEuNTk2Njc3IDgyOC45NDE3ODUsNDIxLjQ5Njk4NSA4MjguNTQyNjQ2LDQyMS4yOTg3MDggQzgyOC4xNDI0LDQyMS4xMDA0MzEgODI2LjE3NTg3Nyw0MjAuMTQwMDYyIDgyNS44MDk5NjksNDIwLjAwODI0NiBDODI1LjQ0Mjk1NCw0MTkuODc2MDYyIDgyNS4xNzYsNDE5LjgwOTIzMSA4MjQuOTA5Nzg1LDQyMC4yMDY1MjMgQzgyNC42NDM1NjksNDIwLjYwMzgxNSA4MjMuODc3MDQ2LDQyMS40OTY5ODUgODIzLjY0MzMyMyw0MjEuNzYxNzIzIEM4MjMuNDA5OTY5LDQyMi4wMjY4MzEgODIzLjE3Njk4NSw0MjIuMDYwMDYyIDgyMi43NzcxMDgsNDIxLjg2MTQxNSBDODIyLjM3NzYsNDIxLjY2MzEzOCA4MjEuMDg4OTg1LDQyMS4yNDQwNjIgODE5LjU2MTEwOCw0MTkuODkyMzA4IEM4MTguMzcyNTU0LDQxOC44NDA3MzggODE3LjU2OTg0Niw0MTcuNTQyNTIzIDgxNy4zMzY4NjIsNDE3LjE0NDg2MiBDODE3LjEwMzUwOCw0MTYuNzQ3OTM4IDgxNy4zMTIxMjMsNDE2LjUzMzQxNSA4MTcuNTEyMjQ2LDQxNi4zMzU4NzcgQzgxNy42OTIwNjIsNDE2LjE1NzkwOCA4MTcuOTEyMTIzLDQxNS44NzI0OTIgODE4LjExMjI0Niw0MTUuNjQwOTg1IEM4MTguMzEyMzY5LDQxNS40MDkxMDggODE4LjM3ODgzMSw0MTUuMjQ0MDYyIDgxOC41MTE3NTQsNDE0Ljk3ODk1NCBDODE4LjY0NTQxNSw0MTQuNzE0MjE1IDgxOC41Nzg1ODUsNDE0LjQ4MjcwOCA4MTguNDc4NTIzLDQxNC4yODM2OTIgQzgxOC4zNzg0NjIsNDE0LjA4NTQxNSA4MTcuNTc4MzM4LDQxMi4xMzI5MjMgODE3LjI0NTI5Miw0MTEuMzM4MzM4IEM4MTYuOTEyMjQ2LDQxMC41NDQ0OTIgODE2LjU3OTU2OSw0MTAuNjc2Njc3IDgxNi4zNDU4NDYsNDEwLjY3NjY3NyBDODE2LjExMjQ5Miw0MTAuNjc2Njc3IDgxNS44NDU5MDgsNDEwLjY0MzQ0NiA4MTUuNTc5MzIzLDQxMC42NDM0NDYgQzgxNS4zMTI3MzgsNDEwLjY0MzQ0NiA4MTQuODc5MjYyLDQxMC43NDI3NjkgODE0LjUxMjYxNSw0MTEuMTM5NjkyIEM4MTQuMTQ2MzM4LDQxMS41MzY5ODUgODEzLjExMzYsNDEyLjQ5Njk4NSA4MTMuMTEzNiw0MTQuNDQ5MTA4IEM4MTMuMTEzNiw0MTYuNDAxNiA4MTQuNTQ1ODQ2LDQxOC4yODggODE0Ljc0NjMzOCw0MTguNTUyMzY5IEM4MTQuOTQ2MDkyLDQxOC44MTY3MzggODE3LjUxMTg3Nyw0MjIuOTUzNiA4MjEuNTc2NzM4LDQyNC41NDI0IEM4MjUuNjQzMDc3LDQyNi4xMzA4MzEgODI1LjY0MzA3Nyw0MjUuNjAwOTg1IDgyNi4zNzYzNjksNDI1LjUzNDg5MiBDODI3LjEwODU1NCw0MjUuNDY4OCA4MjguNzQxMjkyLDQyNC41NzUyNjIgODI5LjA3NTQ0Niw0MjMuNjQ4ODYyIEM4MjkuNDA4MTIzLDQyMi43MjE3MjMgODI5LjQwODEyMyw0MjEuOTI3MTM4IDgyOS4zMDg4LDQyMS43NjE3MjMgTDgyOS4zMDg4LDQyMS43NjE3MjMgWiIgaWQ9IndoYXRzYXBwIi8+PC9nPjwvZz48L2c+PC9zdmc+"); /*Base 64 Icon by Xinh Studio*/
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+.pinterest-share-button{
+            display: inline-block;            
+            width: 40px;
+            height: 40px;
+            margin: 5px;
+            background-size: 100% 100%; /* ou 'contain' */
+            background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSI2MHB4IiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA2MCA2MCIgd2lkdGg9IjYwcHgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6c2tldGNoPSJodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2gvbnMiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48dGl0bGUvPjxkZXNjLz48ZGVmcy8+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBpZD0ic29pY2FsIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSI+PGcgaWQ9InNvY2lhbCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTY3My4wMDAwMDAsIC0xMzguMDAwMDAwKSI+PGcgaWQ9InNsaWNlcyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTczLjAwMDAwMCwgMTM4LjAwMDAwMCkiLz48ZyBmaWxsPSIjQ0E0NzM4IiBpZD0ic3F1YXJlLWZsYXQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE3My4wMDAwMDAsIDEzOC4wMDAwMDApIj48cGF0aCBkPSJNNTAyLjk5NTkzNywwIEw1NTcuMDA0MDYzLDAgQzU1OC42NTg2NzMsMCA1NjAsMS4zMzczMDk3NCA1NjAsMi45OTU5Mzc0MyBMNTYwLDU3LjAwNDA2MjYgQzU2MCw1OC42NTg2NzMxIDU1OC42NjI2OSw2MCA1NTcuMDA0MDYzLDYwIEw1MDIuOTk1OTM3LDYwIEM1MDEuMzQxMzI3LDYwIDUwMCw1OC42NjI2OTAzIDUwMCw1Ny4wMDQwNjI2IEw1MDAsMi45OTU5Mzc0MyBDNTAwLDEuMzQxMzI2ODggNTAxLjMzNzMxLDAgNTAyLjk5NTkzNywwIFoiIGlkPSJzcXVhcmUtNiIvPjwvZz48ZyBmaWxsPSIjRkZGRkZGIiBpZD0iaWNvbiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTgyLjAwMDAwMCwgMTUwLjAwMDAwMCkiPjxwYXRoIGQ9Ik01MjMuNzU5NDUzLDI3LjA4NDQwMTEgQzUzMC4zNjUwNjEsMjcuMDg0NDAxMSA1MzQuODQ2MTU0LDIwLjkzNzA0OTMgNTM0Ljg0NjE1NCwxMi43MDgzMTA2IEM1MzQuODQ2MTU0LDYuNDg3OTAxMjUgNTI5LjY4MzI5NiwwLjY5MjMwNzY5MiA1MjEuODM4NzMyLDAuNjkyMzA3NjkyIEM1MTIuMDc2MzkzLDAuNjkyMzA3NjkyIDUwNy4xNTM4NDYsNy44Mzc1MTA2IDUwNy4xNTM4NDYsMTMuNzk1NzU0OCBDNTA3LjE1Mzg0NiwxNy40MDM1MzIxIDUwOC40OTA4NzEsMjAuNjEzMjUxMyA1MTEuMzYxNjQ0LDIxLjgwOTUzMDEgQzUxMS44MzE5NTksMjIuMDA1NTUyNiA1MTIuMjUzMzg3LDIxLjgxNTg0MzcgNTEyLjM5MDMyOSwyMS4yODQ1OTg1IEM1MTIuNDgzOTc5LDIwLjkxNjMwNDYgNTEyLjcxMDQ0OSwxOS45ODczMDE5IDUxMi44MDg4MTEsMTkuNjAwOTY5MSBDNTEyLjk0NjYzNywxOS4wNzQ4MzQ5IDUxMi44OTM2MjcsMTguODkwNTM3NiA1MTIuNTEzNzI0LDE4LjQzMTc0ODYgQzUxMS42ODY3NzEsMTcuNDM0MTk4MiA1MTEuMTU5MDI5LDE2LjE0NTMxOTcgNTExLjE1OTAyOSwxNC4zMTc2Nzk5IEM1MTEuMTU5MDI5LDkuMDE3MjUzNzcgNTE1LjA0MTk5Niw0LjI3MjEyNDcgNTIxLjI3NDc2Nyw0LjI3MjEyNDcgQzUyNi43OTEwMjQsNC4yNzIxMjQ3IDUyOS44MjQwNjYsNy43MTMwNDIyOSA1MjkuODI0MDY2LDEyLjMxMDU1MzEgQzUyOS44MjQwNjYsMTguMzU4MzkwNSA1MjcuMjAyNDM4LDIzLjQ2Mjc5NCA1MjMuMzA5NDU5LDIzLjQ2Mjc5NCBDNTIxLjE1OTAyOSwyMy40NjI3OTQgNTE5LjU1MTM2MSwyMS42NDgwODIgNTIwLjA2NjE0NCwxOS40MjI2ODQ4IEM1MjAuNjgyNTMsMTYuNzY1NTU2OCA1MjEuODgwNTUxLDEzLjg5Njc3MjYgNTIxLjg4MDU1MSwxMS45Nzg2Mzc2IEM1MjEuODgwNTUxLDEwLjI2MjUzODIgNTIwLjk3NzkxMyw4LjgyOTM0ODcxIDUxOS4xMDkwMjMsOC44MjkzNDg3MSBDNTE2LjkxMTE3OSw4LjgyOTM0ODcxIDUxNS4xNDYyNDgsMTEuMTUwOTUzNCA1MTUuMTQ2MjQ4LDE0LjI1OTM1NDIgQzUxNS4xNDYyNDgsMTYuMjM5MTIyIDUxNS44MDI2ODYsMTcuNTc4NTA5MyA1MTUuODAyNjg2LDE3LjU3ODUwOTMgQzUxNS44MDI2ODYsMTcuNTc4NTA5MyA1MTMuNTUzNTk5LDI3LjMwNTM3NzUgNTEzLjE1ODY3NiwyOS4wMDgyNDg0IEM1MTIuODAwNTY1LDMwLjU1ODk5MTMgNTEyLjc0Njk2NywzMi4yNjMzNjU0IDUxMi43OTczMjYsMzMuNzAzNzcwNSBDNTEyLjk0NzgxNSwzNC45OTU5NTYxIDUxNC4xOTk0MzUsMzYuMDQ4MjI0NCA1MTUuMjg1MjUyLDM0LjYzMDY2ODYgQzUxNi4wNDg1OTIsMzMuMzg1MDgzNSA1MTYuODY5MzYsMzEuODEyMDkyNiA1MTcuMjk0MDI4LDMwLjIzNTQ5MzkgQzUxNy41NDcyOTcsMjkuMzAyNTgyOCA1MTguNzQwMDE2LDI0LjQ2OTk2NTIgNTE4Ljc0MDAxNiwyNC40Njk5NjUyIEM1MTkuNDU0NzY1LDI1Ljg2MDE2MiA1MjEuNTQxMjg5LDI3LjA4NDQwMTEgNTIzLjc1OTQ1MywyNy4wODQ0MDExIFoiIGlkPSJwaW50ZXJlc3QiLz48L2c+PC9nPjwvZz48L3N2Zz4="); /*Base 64 Icon by Xinh Studio*/
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .linkedin-share-button{
+            display: inline-block;            
+            width: 40px;
+            height: 40px;
+            margin: 5px;
+            background-size: 100% 100%; /* ou 'contain' */
+            background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSI2MHB4IiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA2MCA2MCIgd2lkdGg9IjYwcHgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6c2tldGNoPSJodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2gvbnMiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48dGl0bGUvPjxkZXNjLz48ZGVmcy8+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBpZD0ic29pY2FsIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSI+PGcgaWQ9InNvY2lhbCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTc3My4wMDAwMDAsIC0xMzguMDAwMDAwKSI+PGcgaWQ9InNsaWNlcyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTczLjAwMDAwMCwgMTM4LjAwMDAwMCkiLz48ZyBmaWxsPSIjMzQ2REE2IiBpZD0ic3F1YXJlLWZsYXQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE3My4wMDAwMDAsIDEzOC4wMDAwMDApIj48cGF0aCBkPSJNNjAyLjk5NTkzNywwIEw2NTcuMDA0MDYzLDAgQzY1OC42NTg2NzMsMCA2NjAsMS4zMzczMDk3NCA2NjAsMi45OTU5Mzc0MyBMNjYwLDU3LjAwNDA2MjYgQzY2MCw1OC42NTg2NzMxIDY1OC42NjI2OSw2MCA2NTcuMDA0MDYzLDYwIEw2MDIuOTk1OTM3LDYwIEM2MDEuMzQxMzI3LDYwIDYwMCw1OC42NjI2OTAzIDYwMCw1Ny4wMDQwNjI2IEw2MDAsMi45OTU5Mzc0MyBDNjAwLDEuMzQxMzI2ODggNjAxLjMzNzMxLDAgNjAyLjk5NTkzNywwIFoiIGlkPSJzcXVhcmUtNyIvPjwvZz48ZyBmaWxsPSIjRkZGRkZGIiBpZD0iaWNvbiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTgyLjAwMDAwMCwgMTUwLjAwMDAwMCkiPjxwYXRoIGQ9Ik02MTIuODgzMDc1LDMxLjgyMzE1MTIgTDYxMi44ODMwNzUsMTMuNTI0MzM4OSBMNjA3LjIyNzM3LDEzLjUyNDMzODkgTDYwNy4yMjczNywzMS44MjMxNTEyIEw2MTIuODgzMDc1LDMxLjgyMzE1MTIgWiBNNjEyLjg4MzA3NSw3LjAzODIxNDU1IEM2MTIuODQ5Mzg4LDUuNDAwNjU5OTYgNjExLjc1ODAxNiw0LjE1Mzg0NjE1IDYwOS45ODUwNTQsNC4xNTM4NDYxNSBDNjA4LjIxMTYzMiw0LjE1Mzg0NjE1IDYwNy4wNTI4ODUsNS40MDA2NTk5NiA2MDcuMDUyODg1LDcuMDM4MjE0NTUgQzYwNy4wNTI4ODUsOC42NDAyMDIzNCA2MDguMTc3OTQ0LDkuOTIzMDc2OTIgNjA5LjkxNzIxOSw5LjkyMzA3NjkyIEw2MDkuOTUwOTA2LDkuOTIzMDc2OTIgQzYxMS43NTgwMTYsOS45MjMwNzY5MiA2MTIuODgzMDc1LDguNjQwMjAyMzQgNjEyLjg4MzA3NSw3LjAzODIxNDU1IFogTTYyMi4xMTAwNDIsMzEuODIzMTUxNyBMNjIyLjExMDA0MiwyMS4zOTczNzI5IEM2MjIuMTEwMDQyLDIwLjgzOTQwMTQgNjIyLjE1MDM3LDIwLjI4MTQzIDYyMi4zMTQ0NDcsMTkuODgzNjY4MiBDNjIyLjc2MzAzNCwxOC43NjgyNzc4IDYyMy43ODM5NTYsMTcuNjEzNjYzNyA2MjUuNDk4MTk5LDE3LjYxMzY2MzcgQzYyNy43NDM4OTYsMTcuNjEzNjYzNyA2MjkuMTUyMjc4LDE4Ljg4ODE1ODcgNjI5LjE1MjI3OCwyMS4zOTczNzI3IEw2MjkuMTUyMjc4LDMxLjgyMzE1MTYgTDYzNC44NDYxNTQsMzEuODIzMTUxNyBMNjM0Ljg0NjE1NCwyMS4xMTgzODcyIEM2MzQuODQ2MTU0LDE1LjM4Mzk4NzggNjMxLjc4NTA0NSwxMi43MTU2NjkgNjI3LjcwMTkxLDEyLjcxNTY2OSBDNjI0LjM1NDA4MSwxMi43MTU2NjkgNjIyLjg4NDU3MiwxNC41ODczNTkzIDYyMi4wNjg2MDgsMTUuODYxMzAyIEw2MjIuMTA5NDg5LDEzLjQxMzkxMjMgTDYxNi40MjU0NjIsMTMuNDEzOTEyMyBDNjE2LjUwNzIyNCwxNS4xNjU3MjE1IDYxNi40MjU0NjIsMzEuODIzMTUxNiA2MTYuNDI1NDYyLDMxLjgyMzE1MTYgTDYyMi4xMTAwNDIsMzEuODIzMTUxNyBaIiBpZD0ibGlua2VkaW4iLz48L2c+PC9nPjwvZz48L3N2Zz4="); /*Base 64 Icon by Xinh Studio*/
+            background-repeat: no-repeat;
+            background-position: center;
+        }  
+        .botoes {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            
+        }      
+@media(max-width:430px) {
+    .header {
+        padding: 0 20px;
+        
+    }
+    .container {
+        display: flex;
+        padding: 20px 20px;
+        
+        flex-direction: column;
+        
+
+    }
+    .desc {
+        display: flex;
+        flex-direction: column;
+    }
+    .imagemPreco {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    
+    .garantia {
+        display: flex;
+        flex-direction: column;
+    }
+    .Aprender .ConteudoDasAulas{
+        display: flex;
+        flex-direction: column;
+    }
+    .ConteudoDasAulas{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .desc h2 {
+        width: 300px;
+    }
+    .imagemPreco img {
+        width: 350px;
+        height: 290px;
+    }
+    .img img {
+        display: flex;
+        justify-content: center;
+        width: 300px;
+        
+        align-items: center;
+        
+        margin-top: 10px;
+    }
+    
+    .imagemGarantia img{
+        width: 200px;
+        height: 180px;
+        margin-bottom: 10px;
+    }
+    
+}
+.wprgpd-modal-dialogg{
+    
+    bottom:0px;right:0px;width:100%;
+    
+    position:fixed;
+    
+    padding:10px 20px 20px
+    
+}
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="titulo">
+            <h1>Chegue a faturar entre <span style="color: red;"> R$ 1.800,00 </span> à  <span style="color: red;">R$ 6.000,00</span> por mês no mercado que mais cresce no Brasil.</h1>
+        </div>
+        <div class="botoes">
+            <a href="" id="facebook-share-btt" rel="nofollow" target="_blank" class="facebook-share-button"></a>
+            
+            <!-- Você pode colocar este script num arquivo externo -->
+            <script type="text/javascript">
+                //Constrói a URL depois que o DOM estiver pronto
+                document.addEventListener("DOMContentLoaded", function() {            
+                    //altera a URL do botão
+                    document.getElementById("facebook-share-btt").href = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(window.location.href);
+                }, false);
+            </script>
+        
+        
+        <a href="" id="whatsapp-share-btt" rel="nofollow" target="_blank" class="whatsapp-share-button"></a>
+            
+        <!-- Você pode colocar este script num arquivo externo -->
+        <script type="text/javascript">
+            //Constrói a URL depois que o DOM estiver pronto
+            document.addEventListener("DOMContentLoaded", function() {
+                //conteúdo que será compartilhado: Título da página + URL
+                var conteudo = encodeURIComponent(document.title + " " + window.location.href);
+                //altera a URL do botão
+                document.getElementById("whatsapp-share-btt").href = "https://api.whatsapp.com/send?text=" + conteudo;
+            }, false);
+        </script>
+        
+        
+        <a href="" id="pinterest-share-btt" rel="nofollow" target="_blank" class="pinterest-share-button"></a>
+            
+        <!-- Você pode colocar este script num arquivo externo -->
+        <script type="text/javascript">
+            //Constrói a URL depois que o DOM estiver pronto
+            document.addEventListener("DOMContentLoaded", function() {
+                var url = encodeURIComponent(window.location.href);
+                
+                //tenta obter o conteúdo da meta tag description
+                var desc = document.querySelector("meta[name='description']");            
+                desc = (!!desc)? desc.getAttribute("content") : null;
+                
+                //se a meta tag description estiver ausente...
+                if(!desc){
+                    //...tenta obter o conteúdo da meta tag og:description
+                    desc = document.querySelector("meta[property='og:description']");
+                    desc = (!!desc)? desc.getAttribute("content") : null;
+                }
+                
+                //metas tags description e og:description ausentes
+                if(!desc){
+                    //obtém title
+                    desc = document.title;
+                }
+                
+                //altera a URL do botão
+                document.getElementById("pinterest-share-btt").href = "https://www.pinterest.com/pin/create/button/?url="+url+"&description="+encodeURIComponent(desc);
+            }, false);
+        </script>
+        
+        <a href="" id="linkedin-share-btt" rel="nofollow" target="_blank" class="linkedin-share-button"></a>
+            
+        <!-- Você pode colocar este script num arquivo externo -->
+        <script type="text/javascript">
+            //Constrói a URL depois que o DOM estiver pronto
+            document.addEventListener("DOMContentLoaded", function() {
+                var url = encodeURIComponent(window.location.href); //url
+                var titulo = encodeURIComponent(document.title); //título
+                var linkedinLink = "https://www.linkedin.com/shareArticle?mini=true&url="+url+"&title="+titulo;
+                
+                //tenta obter o conteúdo da meta tag description
+                var summary = document.querySelector("meta[name='description']");            
+                summary = (!!summary)? summary.getAttribute("content") : null;
+                
+                //se a meta tag description estiver ausente...
+                if(!summary){
+                    //...tenta obter o conteúdo da meta tag og:description
+                    summary = document.querySelector("meta[property='og:description']");
+                    summary = (!!summary)? summary.getAttribute("content") : null;
+                }
+                //altera o link do botão
+                linkedinLink = (!!summary)? linkedinLink + "&summary=" + encodeURIComponent(summary) : linkedinLink;
+                document.getElementById("linkedin-share-btt").href = linkedinLink;
+            }, false);
+        </script>
+        
+        
+            </div>
+        <div class="logo">
+            <div class="card" style="width: 20rem;">
+                <img src="https://i0.wp.com/patraojamais.com/wp-content/uploads/2022/07/Screenshot.png?resize=300%2C123&ssl=1" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text" style="text-align:center; ">Aprenda as melhores técnicas de corte mesmo que você NUNCA TENHA PEGADO EM UMA TESOURA.</p>
+                </div>
+              </div>
+        </div>
+
+        <div class="desc">
+            <h2 class="neontxt">VEJA COMO SE TORNAR UM BARBEIRO<br>
+                PROFISSIONAL COMEÇANDO DO  ABSOLUTO DO ZERO</h2>
+                <p>ASSISTA ESTE VÍDEO ABAIXO CURSO 100% ONLINE ACESSO IMEDIATO!</p>
+        </div>
+        <br>
+        <div class="video">
+            <iframe width="700" height="500" src="https://www.youtube.com/embed/3BZyDIlaPDQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <br>
+        <div class="txtcertificado">
+            <h3>CERTIFICADO DE CONCLUSÃO</h3>
+            <p>Após concluir o nosso Curso de Barbeiro Online você irá receber este 
+                maravilhoso CERTIFICADO DE CONCLUSÃO, <span style="color:red ;"> SEM NENHUM CUSTO </span></spa></p>
+        </div>
+        <div class="imagensCertificados">
+            <div class="card text-bg-dark" style="width: 600px; margin-right: 10px;border: 3px solid red;  animation: neon 3s alternate infinite ease-in-out;--cor-neon:red;">
+                <img src="https://i0.wp.com/patraojamais.com/wp-content/uploads/2022/06/2-1.jpg?resize=1024%2C791&ssl=1" class="card-img" alt="...">
+              </div>
+              <br>
+              <div class="card text-bg-dark" style="width: 600px;border: 3px solid red; animation: neon 3s alternate infinite ease-in-out;--cor-neon:red;">
+                <img src="https://i0.wp.com/patraojamais.com/wp-content/uploads/2022/06/Verso-1-1024x791-1.jpg?w=1024&ssl=1" class="card-img" alt="...">
+              </div>
+
+
+        </div>
+
+        <div class="imagemPreco">
+            <img src="https://i0.wp.com/patraojamais.com/wp-content/uploads/2022/06/Inserir-um-titulo-2.jpg?w=1024&ssl=1">
+        </div>
+              
+    <div class="Botao-inscricao">
+            <a href="https://pay.hotmart.com/X11924653L?off=k8o24yr1&checkoutMode=10&ref=M65774152T&bid=1659487078050"> <button  type="button" style="background-color: red;" class="btn btn-danger">SIM QUERO REALIZAR MINHA INSCRIÇÃO</button></a>
+        
+    </div>
+    <br>
+
+    <div class="garantia">
+        <div class="imagemGarantia">
+            <img src="https://i0.wp.com/patraojamais.com/wp-content/uploads/2022/06/unnamed-1.png?w=512&ssl=1">
+        </div>
+        <div class="textoGarantia">
+            <h2>Garantia de 07 dias com risco zero!</h2>
+            <p>Ainda não tem certeza? Não se preocupe.
+                Se o conteúdo descrito acima não for o mesmo que você receber,<span style="color: red;"> você tem 07 dias de garantia</span> e vamos devolver a quantia paga, sem burocracia!<br><br>
+                Lembrando que seu acesso a plataforma e <span style="color: red;"> VITALÍCIO </span> e nosso curso e constantemente atualizado com novas técnicas e informações que vão fazer de você um <span style="color:red ;">Barbeiro de Sucesso.</span> </p>
+        </div>
+    </div>
+
+    <div class="Aprender">
+        <h2>O que você vai aprender no curso?</h2>
+        <h3>Confira o conteúdo das aulas:</h2>
+            <br>
+    </div>
+
+    <div class="ConteudoDasAulas">
+
+        <div class="img">
+            <img src="https://i0.wp.com/patraojamais.com/wp-content/uploads/2022/06/Materiais-e-Ferramenta-de-Trabalho-Tecnicas-de-Acabamento-de-Cortes-Tecnicas-e-Cortes-Navalhado-Tecnicas-de-Cortes-Basico-Tecnicas-de-Cortes-Degrade-Barba-Quadrada-Barba-Lenhador-1.jpg?w=1024&ssl=1">
+        </div>
+        <br>
+        <div class="img">
+            <img src="https://i0.wp.com/patraojamais.com/wp-content/uploads/2022/06/Materiais-e-Ferramenta-de-Trabalho-Tecnicas-de-Acabamento-de-Cortes-Tecnicas-e-Cortes-Navalhado-Tecnicas-de-Cortes-Basico-Tecnicas-de-Cortes-Degrade-Barba-Quadrada-Barba-Lenhador-3.jpg?w=1024&ssl=1">
+
+        </div>
+        <br>
+        <div class="img">
+            <img src="https://i0.wp.com/patraojamais.com/wp-content/uploads/2022/06/Materiais-e-Ferramenta-de-Trabalho-Tecnicas-de-Acabamento-de-Cortes-Tecnicas-e-Cortes-Navalhado-Tecnicas-de-Cortes-Basico-Tecnicas-de-Cortes-Degrade-Barba-Quadrada-Barba-Lenhador-2.jpg?w=1024&ssl=1">
+        </div>
+    </div>
+    <div class="tx">
+        <h1> E muito mais!.</h1>
+    </div>
+    <div class="imagemPreco">
+        <img src="https://i0.wp.com/patraojamais.com/wp-content/uploads/2022/06/Inserir-um-titulo-2.jpg?w=1024&ssl=1">
+    </div>
+    <div class="Botao-inscricao">
+        <a href="https://pay.hotmart.com/X11924653L?off=k8o24yr1&checkoutMode=10&ref=M65774152T&bid=1659487078050"> <button  type="button" style="background-color: red;" class="btn btn-danger">SIM QUERO REALIZAR MINHA INSCRIÇÃO</button></a>
+    
+</div>
+<br>
+    <div class="textoUltimovideo">
+        <h2>Veja os Depoimentos de nossos alunos sobre o curso:</h2>
+    </div>
+
+
+
+    <div class="video">
+        <iframe width="700" height="500" src="https://www.youtube.com/embed/15U3rxcEBBk" allowfullscreen></iframe>
+    </div>
+ 
+    <div class="botoes">
+    <a href="" id="facebook-share-btt" rel="nofollow" target="_blank" class="facebook-share-button"></a>
+    
+    <!-- Você pode colocar este script num arquivo externo -->
+    <script type="text/javascript">
+        //Constrói a URL depois que o DOM estiver pronto
+        document.addEventListener("DOMContentLoaded", function() {            
+            //altera a URL do botão
+            document.getElementById("facebook-share-btt").href = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(window.location.href);
+        }, false);
+    </script>
+
+
+<a href="" id="whatsapp-share-btt" rel="nofollow" target="_blank" class="whatsapp-share-button"></a>
+    
+<!-- Você pode colocar este script num arquivo externo -->
+<script type="text/javascript">
+    //Constrói a URL depois que o DOM estiver pronto
+    document.addEventListener("DOMContentLoaded", function() {
+        //conteúdo que será compartilhado: Título da página + URL
+        var conteudo = encodeURIComponent(document.title + " " + window.location.href);
+        //altera a URL do botão
+        document.getElementById("whatsapp-share-btt").href = "https://api.whatsapp.com/send?text=" + conteudo;
+    }, false);
+</script>
+
+
+<a href="" id="pinterest-share-btt" rel="nofollow" target="_blank" class="pinterest-share-button"></a>
+    
+<!-- Você pode colocar este script num arquivo externo -->
+<script type="text/javascript">
+    //Constrói a URL depois que o DOM estiver pronto
+    document.addEventListener("DOMContentLoaded", function() {
+        var url = encodeURIComponent(window.location.href);
+        
+        //tenta obter o conteúdo da meta tag description
+        var desc = document.querySelector("meta[name='description']");            
+        desc = (!!desc)? desc.getAttribute("content") : null;
+        
+        //se a meta tag description estiver ausente...
+        if(!desc){
+            //...tenta obter o conteúdo da meta tag og:description
+            desc = document.querySelector("meta[property='og:description']");
+            desc = (!!desc)? desc.getAttribute("content") : null;
+        }
+        
+        //metas tags description e og:description ausentes
+        if(!desc){
+            //obtém title
+            desc = document.title;
+        }
+        
+        //altera a URL do botão
+        document.getElementById("pinterest-share-btt").href = "https://www.pinterest.com/pin/create/button/?url="+url+"&description="+encodeURIComponent(desc);
+    }, false);
+</script>
+
+<a href="" id="linkedin-share-btt" rel="nofollow" target="_blank" class="linkedin-share-button"></a>
+    
+<!-- Você pode colocar este script num arquivo externo -->
+<script type="text/javascript">
+    //Constrói a URL depois que o DOM estiver pronto
+    document.addEventListener("DOMContentLoaded", function() {
+        var url = encodeURIComponent(window.location.href); //url
+        var titulo = encodeURIComponent(document.title); //título
+        var linkedinLink = "https://www.linkedin.com/shareArticle?mini=true&url="+url+"&title="+titulo;
+        
+        //tenta obter o conteúdo da meta tag description
+        var summary = document.querySelector("meta[name='description']");            
+        summary = (!!summary)? summary.getAttribute("content") : null;
+        
+        //se a meta tag description estiver ausente...
+        if(!summary){
+            //...tenta obter o conteúdo da meta tag og:description
+            summary = document.querySelector("meta[property='og:description']");
+            summary = (!!summary)? summary.getAttribute("content") : null;
+        }
+        //altera o link do botão
+        linkedinLink = (!!summary)? linkedinLink + "&summary=" + encodeURIComponent(summary) : linkedinLink;
+        document.getElementById("linkedin-share-btt").href = linkedinLink;
+    }, false);
+</script>
+
+
+    </div>
+
+    
+    <script type="text/javascript">
+ 
+        function rgpdDisplayPopup()
+        {
+          //document.getElementByID("myModalrgpd").style.display = "block";
+          alert("ok");
+        }
+        
+        
+        function idRgpdSetCookie(cname, cvalue, exdays)
+        {//create js cookie
+          var d = new Date();
+          d.setTime(d.getTime() + (exdays*24*60*60*1000));
+          var expires = "expires="+ d.toUTCString();
+          document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+          }
+      
+        function setCookie(cname, cvalue, exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays*24*60*60*1000));
+        var expires = "expires="+ d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+        
+        function rgpdSetCookie()
+        {//ajax and js cookie function call
+          var set=2;
+          
+           var xhttp = new XMLHttpRequest();
+             xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200){
+          set=this.responseText;  
+          }
+          };
+        
+          xhttp.open("POST", "https://patraojamais.com/wp-content/plugins/wp_rgpd/update.php", true);
+          xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+          xhttp.send("rgpdset=1");
+        
+            
+        setCookie('IDRGPD','created',3650);
+        document.getElementById("myModalrgpd").style.display = "none";
+        
+        }
+        </script>
+        
+                
+                      
+                       <div id="myModalrgpd" class="wprgpd-modal-dialogg rgpdboxcolor" style="font-family:poppins;background-color: rgba(0    , 0, 255, 0.5);">
+                      
+      
+                     <!--  <form action="" method="post"> -->
+                          <font color="white">
+                          <b>Importante:</b> 
+      Este site faz uso de cookies para melhorar a sua experiência de navegação e recomendar conteúdo de seu interesse. Ao utilizar nossos sites, você concorda com tal monitoramento.​​
+      
+      
+              
+                          </font>
+              
+               
+                          
+                      <div style="display:inline-grid;float: right;">
+      
+                      <button id="rgpdcookieaccept" name="rgpdcookieaccept" class="rgpdacceptbtn btn btn-primary pull-right" onclick="rgpdSetCookie()" style="float:right;margin-top:5px; margin-right:10px; " id="yes">
+                      concordo fechar                </button>
+                      
+               
+                               </div>
+               
+                               <font size="1px">
+                          
+                      <a style="text-decoration:none ;color:white;" href="https://github.com/Jonathanst1" target="_blank">
+                          Criado por Jonathan Frazão.
+                      </a>
+                          
+                      </font>            
+               
+                    
+                  </div>
+        
+
+</div>
+
+
+    
+    
+</body>
+</html>
